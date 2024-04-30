@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="VFRxBenchmark.">
+  <meta name="keywords" content="Video Face Dataset, real, Face Video Super Resolution, Restoration">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VFRxBenchmark</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="https://scripts.sirv.com/sirvjs/v3/sirv.js"></script>
+  <style>
+    #pic_list {
+      display: block;
+      white-space: nowrap;
+      overflow: auto;
+    }
+
+    #pic_list li {
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://liangbinxie.github.io/">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
+
+        <!-- <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://hypernerf.github.io">
+              HyperNeRF
+            </a>
+            <a class="navbar-item" href="https://nerfies.github.io">
+              Nerfies
+            </a>
+            <a class="navbar-item" href="https://latentfusion.github.io">
+              LatentFusion
+            </a>
+            <a class="navbar-item" href="https://photoshape.github.io">
+              PhotoShape
+            </a>
+          </div>
+        </div> -->
+      </div>
+
+    </div>
+  </nav>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">
+                Towards Real-world <font color="Tomato">V</font>ideo <font color="Tomato">F</font>ace <font color="Tomato">R</font>estoration: A New <font color="Tomato">Benchmark</font>
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=zjrMFIIAAAAJ&hl=zh-CN">Ziyan Chen</a><sup>1,3<span data-tooltip="Equal Contribution">*</span></sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=GUxrycUAAAAJ&hl=zh-CN&oi=ao">JingWen He</a><sup>2,3<span data-tooltip="Equal Contribution">*</span></sup>,</span>
+              <span class="author-block">
+                <a href="https://github.com/0x3f3f3f3fun">XinQi Lin</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=gFtI-8QAAAAJ&hl=zh-CN">Yu Qiao</a><sup>3</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com.hk/citations?user=OSDCB0UAAAAJ&hl=zh-CN">Chao Dong</a><sup>1,3<span data-tooltip="Corresponding Author">&dagger;</span></sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences.<br></span>
+              <span class="author-block"><sup>2</sup>The Chinese University of Hong Kong.</span>
+              &nbsp;&nbsp;
+              <span class="author-block"><sup>3</sup>Shanghai AI Laboratory.</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="paper.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2205.03409" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <!-- <span class="link-block">
+                  <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span> -->
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                <!-- <span class="link-block">
+                  <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>Data</span>
+                  </a> -->
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop has-text-centered">
+      <div class="hero-body">
+        <!-- <h2 class="title is-3"><font color="Tomato">FOS</font> datasets</h2> -->
+        <div class="figure">
+          <!-- <video id="replay-video" controls muted preload autoplay loop width="100%">
+            <source src="./static/images/fos_v_samples.gif" type="video/mp4">
+          </video> -->
+          <!-- <img class="Sirv image-main" src="static/img/teaser.png" data-src="static/img/teaser.png"> -->
+          <!-- <h1 class="title has-text-centered">FOS-V</h1> -->
+          <img class="Sirv image-hover" data-src="./static/images/fos_v_samples.gif">
+        </div>
+        <div class="content has-text-centered">
+          <p>Samples from <font color="Tomato"><b>FOS-V</b></font>, a real video test dataset.</p>
+        </div>
+
+        <div class="figure">
+          <img class="Sirv image-hover" data-src="./static/images/fos_real_samples.png">
+        </div>
+        <div class="content has-text-centered">
+          <p>Samples from <font color="Tomato"><b>FOS-real</b></font> a real image test dataset.</p>
+        </div>
+
+        <div class="figure">
+          <img class="Sirv image-hover" data-src="./static/images/fos_syn_samples.png">
+        </div>
+        <div class="content has-text-centered">
+          <p>Samples from <font color="Tomato"><b>FOS-syn</b></font>, a synthetic image test dataset.</p>
+        </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              <!-- <font color="Tomato"><b>F<b></b></font>ull, <font color="Tomato"><b>O<b></font>ccluded, <font color="Tomato"><b>S<b></font>ide(<b>FOS<b></b>) face test dataset 
+              is proposed to cover faces of more complex scenarios from the real-world for comprehensive real-world performance evaluation of blind face restoration(BFR) and blind video face restoration (VFR). 
+                With hard cases of side & occluded face, media of image & video invovled, FOS dataset contains 3 sub-datasets : 
+                <b>FOS-real<b>, <b>FOS-syn<b> and <b>FOS-v<b>.  -->
+
+                  Blind face restoration (BFR) on images has significantly progressed over the last several years, while real-world video face restoration (VFR), which is more challenging for more complex face motions such as moving gaze directions and facial orientations involved, remains unsolved. 
+                  Typical BFR methods are evaluated on privately synthesized datasets or self-collected real-world low-quality face images, which are limited in their coverage of real-world video frames. In this work, we introduced new real-world datasets named <font color="Tomato"><b>FOS</b></font> with a taxonomy of "<font color="Tomato"><b>F</b></font>ull, <font color="Tomato"><b>O</b></font>ccluded, and <font color="Tomato"><b>S</b></font>ide" faces from mainly video frames to study the applicability of current methods on videos. 
+                  Compared with existing test datasets, FOS datasets cover more diverse degradations and involve face samples from more complex scenarios, which helps to revisit current face restoration approaches more comprehensively. 
+                  Given the established datasets, we benchmarked both the state-of-the-art BFR methods and the video super resolution (VSR) methods to comprehensively study current approaches, identifying their potential and limitations in VFR tasks. In addition, we studied the effectiveness of the commonly used image quality assessment (IQA) metrics and face IQA (FIQA) metrics by leveraging a subjective user study. 
+                  With extensive experimental results and detailed analysis provided, we gained insights from the successes and failures of both current BFR and VSR methods. These results also pose challenges to current face restoration approaches, which we hope stimulate future advances in VFR research.
+            </p>
+
+            <br> <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </section>
+
+  <section>
+
+    <div class="container is-max-desktop">
+      <!-- Statistics. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Statistics</h2>
+          <div class="content has-text-justified">
+            <img src="static/images/fos_v_clip_distribution.png" 
+              class="centered-image" width="70%"
+              alt="Interpolation end reference image." />
+            <p class="is-bold">
+              The clip length distribution of FOS-V test set ranges in [50, 1500] frames, 
+              most of the clips has a length in [50, 250] frames.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr />
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3"> Downloads</h2>
+
+          <h2 class="title is-4"> <font color="Tomato">FOS</font> Test Datasets</h2>
+          <div class="content has-text-justified">
+            <table border="1" style="font-size: 15px;">
+              <thead>
+                <tr>
+                  <th align="left">Name</th>
+                  <th align="center">Size</th>
+                  <!-- <th align="center">Counts</th> -->
+                  <th align="center">Images</th>
+                  <th align="left">Description</th>
+                  <!-- <th align="left">Link</th> -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="left">
+                    <!-- <a href="https://pan.baidu.com/s/1XcDS9hxatLnOumh-JKtj1A?pwd=jzkt"> -->
+                      FOS-real
+                    <!-- </a> -->
+                  </td>
+                  <td align="center">369 MB</td>
+                  <!-- <td align="right"></td> -->
+                  <td align="center"></td>
+                  <td align="left">
+                    Download from 
+                    <a href="https://pan.baidu.com/s/1XcDS9hxatLnOumh-JKtj1A?pwd=jzkt"
+                    rel="nofollow">百度网盘</a> | 
+                    <a href="">OneDrive</a></td>
+                </tr>
+                <tr>
+                  <td align="left" width="190px">├ fos-real_aligned.zip</td>
+                  <td align="center" width="85px">320 MB</td>
+                  <!-- <td align="center">15,381</td> -->
+                  <td align="center" width="90px">
+                    4253
+                    </td>
+                  <td align="left">Aligned 512x512 FOS-real images.
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left">├ fos_real.zip 
+                    </td>
+                  <td align="center">49 MB</td>
+                  <!-- <td align="center">100</td> -->
+                  <td align="center">4253
+                  </td>
+                  <td align="left">
+                    Raw FOS-real images with a size of 128x128.
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left">├ fos_real.pathlist</td>
+                  <td align="center">-</td>
+                  <!-- <td align="center">15,381</td> -->
+                  <td align="center">
+                    -
+                  <td align="left">
+                    Path list file of FOS-real.
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left">└ fos_real_158.pathlist</td>
+                  <td align="center">-</td>
+                  <!-- <td align="center">15,381</td> -->
+                  <td align="center">
+                    -
+                  <td align="left">
+                    Path list file of FOS-real(#158) for user study.
+                  </td>
+                </tr>
+              </tbody>
+              <p>
+                
+              </p>
+            </table>
+            
+            <br>
+            <table border="1" style="font-size:15px;">
+              <thead>
+                <tr>
+                  <th align="left" width="140px">Name</th>
+                  <th align="center" width="87px">Size</th>
+                  <!-- <th align="center">Counts</th> -->
+                  <th align="center" width="13px">Clips</th>
+                  <th align="left" >Description</th>
+                  <!-- <th align="left">Link</th> -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="left">FOS-V</td>
+                  <td align="center">11.35 GB</td>
+                  <!-- <td align="right"></td> -->
+                  <td align="center">-</td>
+                  <td align="left">Download from
+                    <a href="https://pan.baidu.com/s/1yH7A1wOrjeGijSA99Wza-A?pwd=bv60" rel="nofollow">百度网盘</a> | 
+                    <a href="https://mailsdueducn-my.sharepoint.com/:f:/g/personal/201900810039_mail_sdu_edu_cn/EqWrLikis8VAvkJzGlgqbJQBbaiim1VrcnXATZjB8aJ6IA?e=1VNDNV" rel="nofollow">OneDrive</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left">├ fos_v_clips.zip</td>
+                  <td align="center">489 MB</td>
+                  <td align="center">3,316</td>
+                  <td align="left">
+                    Real-world FOS-V clips with size of 128x128.
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left">├ fos_v_frames_interval5_aligned.zip</td>
+                  <td align="center">8.82 GB</td>
+                  <td align="center">3,316</td>
+                  <td align="left">
+                    Aligned 512x512 frames of FOS-V with an interval of 5 frames.
+                    </td>
+                  <td align="left">
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left">├ fos_v_108_frames_interval1_aligned.zip
+                  </td>
+                  <td align="center"> 2.05 GB</td>
+                  <td align="center"> -</td>
+                  <td align="left">
+                    Aligned 512x512 frames of
+                    FOS-V(#108) with an interval of 1 frames for user study in the paper.
+                    </td>
+                </tr>
+                <tr>
+                  <td align="left">└ fos_v_108.pathlist
+                  </td>
+                  <td align="center"> -</td>
+                  <td align="center"> -</td>
+                  <td align="left">
+                    Path list file of FOS-V(#108) for user study in the paper.
+                    </td>
+                </tr>
+              </tbody>
+              <p>
+                
+              </p>
+            </table>
+
+            <br>
+            <table border="1" style="font-size: 15px;">
+              <thead>
+                <tr>
+                  <th align="left" width="160px">Name</th>
+                  <th align="center" width="85px">Size</th>
+                  <!-- <th align="center">Counts</th> -->
+                  <th align="center">Images</th>
+                  <th align="left">Description</th>
+                  <!-- <th align="left">Link</th> -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="left">FOS-syn</td>
+                  <td align="center">346 MB</td>
+                  <!-- <td align="right"></td> -->
+                  <td align="center">-</td>
+                  <td align="left">Download form
+                    <a href="https://pan.baidu.com/s/1zyFBssQIC74xs0UxPuRBBQ?pwd=vpay" rel="nofollow">百度网盘</a> | 
+                    <a href="">OneDrive</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left">├ fos_syn.zip</td>
+                  <td align="center">346 MB</td>
+                  <td align="center">
+                    3,150
+                  </td>
+                  <td align="left">
+                    Synthesized 128x128 <a href="https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html">CelebA-HQ Test</a> LQ images.
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left">└ fos_syn.pathlist
+                  <td align="center"> -</td>
+                  <td align="center"> -</td>
+                  <td align="left">
+                    Path list file of FOS-syn.
+                  </td>
+                </tr>
+              </tbody>
+              <p>
+                
+              </p>
+            </table>
+          </div>
+
+          <br>
+          <h2 class="title is-4 "> Data Source</h2>
+          <div class="content has-text-justified">
+            <p class="text-justify">
+              All real-world data of FOS test datasets are derived from the following two parts. 
+              <li>
+                Videos from the publicly available datasets, <a href="http://seqamlab.com/youtube-celebrities-face-tracking-and-recognition-dataset/">YTCeleb</a> and 
+              <a href="https://www.cs.tau.ac.il/\~wolf/ytfaces/">YTFace</a>.
+              </li>
+              <li>
+                Self-collected video data from YouTube, named as YTW, for which we provide the source meta info in forms of YouTube video id as 
+                <a href="https://pan.baidu.com/s/1-ZgAb1Ianm0xbu-oYpP8Zg?pwd=98m8" target="_blank">YTW source</a>.
+              </li>
+              <br>
+              All videos are processed by face tracking and cropping to form FOS-V. The processing scripts can be found in our <a href="https://github.com/ziyannchen/VFRxBenchmark">GitHub page</a>. 
+              <br>
+              Here we provide the processing meta info of each clip to obtain FOS-V from raw video collections as <a href="https://pan.baidu.com/s/1mxITm8zEr7JGmW77pWQpIA?pwd=shha">FOS-V meta info</a>.
+              Face detections and timestamps are provided in the meta info file of each clip.
+              <br>
+            </p>
+            <div>
+              <table>
+                <tr>
+                  <td>
+                    <figure>
+                      <img src="static/images/folders.png" , width="100px"><br><br>
+                      <!-- <ul> -->
+                        <!-- <li> -->
+                          <strong>YTW source</strong>: <a href="https://pan.baidu.com/s/1-ZgAb1Ianm0xbu-oYpP8Zg?pwd=98m8">百度网盘</a> | 
+                          <a href="">OneDrive</a>
+                            <br>
+                        <!-- </li> -->
+                        <!-- <li> -->
+                          FOS-V meta info: <a href="https://pan.baidu.com/s/1mxITm8zEr7JGmW77pWQpIA?pwd=shha"
+                            target="_blank">
+                            <strong>百度网盘&nbsp;</strong></a> | <a href="">OneDrive</a>
+                        <!-- </li> -->
+                      <!-- </ul> -->
+                    </figure>
+                  </td>
+                </tr>
+              </table>
+              For more details about the datasets, please refer to the <a href="">paper</a> or this <a href="http://">README</a>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr />
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <!-- <div class="column is-four-fifths"> -->
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 "> Benchmarking Results</h2>
+          <div class="content has-text-justified">
+            <p class="text-justify">
+            </p>
+          </div>
+          <h2 class="title is-4 "> Metrics Study</h2>
+          <div class="content has-text-justified">
+            <img src="static/images/srcc_plcc.png" 
+              class="centered-image" width="80%"
+              alt="Interpolation end reference image." />
+            <p class="is-bold">
+              SROCC v.s PLCC results based on subjective scores and quantitative performance of 6 methods on 
+              FOS-real(#158) and FOS-V(#108), with 10 IQA/FIQA algorithms and proposed stability evaluation metric VIDD evaluated.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <hr />
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 ">Agreement</h2>
+          <div class="content has-text-justified">
+
+            <ul>
+              <li> The FOS datasets are only available to download for non-commercial research purposes. The
+                copyright
+                remains with the original owners of the video. A complete
+                version of the license can be found <a href="./license.txt">here</a> and we refer to the
+                license of <a href="https://www.robots.ox.ac.uk/~vgg/data/voxceleb/">VoxCeleb</a>. </li>
+              <li>All images/videos of the FOS datasets are obtained from the Internet which are not property of
+                our institutions. Our institution are not responsible for the content nor the meaning
+                of these videos. </li>
+              <li>You agree not to reproduce, duplicate, copy, sell, trade, resell or exploit for any
+                commercial purposes, any portion of the videos and any portion of derived data. You agree not
+                to further
+                copy, publish or distribute any portion of the FOS datasets.</li>
+              <li>The distribution of identities in the FOS datasets may not be representative of the global
+                human population. Please be careful of unintended societal, gender, racial and other biases when
+                training or deploying models trained on this data.</li>
+            </ul>
+
+  </section>
+
+  <hr />
+  <!-- <section class="section" id="Citaton">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <p>If you find this helpful, please cite our work: </p>
+      <pre><code>@InProceedings{},
+      author = {},
+      title = {Towards Real-world Video Face Restoration: A New Benchmark},
+      booktitle={The IEEE Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)},
+      year = {2024}
+  }</code></pre>
+    </div>
+  </section> -->
+
+
+
+  <footer class="footer">
+    <div class="columns is-centered">
+      <div class="content">
+        <p> This template is borrowed from <a href="https://github.com/nerfies/nerfies.github.io"> nerfies's
+            webpage</a>.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    $(window).on('load', function () {
+      $('#loading').hide();
+    })
+  </script>
+
+</body>
+
+</html>
