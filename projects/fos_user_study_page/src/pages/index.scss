@@ -15,6 +15,10 @@
     margin: 2% 2% 2% 2%;
   }
 
+  .pad-top {
+    margin-top: 5%;
+  }
+
   .tag {
     //height: 30px;
     fill: $primary-color;
@@ -76,8 +80,8 @@
   .text-sub {
     margin: 0;
     font-style: normal;
-    font-size: 20px;
-    line-height: 35px;
+    font-size: 18px;
+    line-height: 25px;
     // text-align: left;
     //font-weight: bold;
     // color: #bbbbbb;

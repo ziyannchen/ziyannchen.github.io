@@ -2,6 +2,7 @@
   "name": "fos_user_study_page",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://username.github.io/projects/fos_user_study_page",
   "lint-staged": {
     "*.{js,jsx,less,md,json}": [
       "prettier --write"
@@ -15,6 +16,7 @@
     "antd": "^4.17.4",
     "eslint": "^9.1.1",
     "file-saver": "^2.0.5",
+    "gh-pages": "^6.1.1",
     "react": "^17.0.2",
     "react-cookie": "^4.1.1",
     "react-dom": "^17.0.2",
@@ -25,6 +27,8 @@
   "scripts": {
     "start": "umi dev",
     "build": "umi build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "test": "umi dev --no-mfsu"
   },
   "devDependencies": {

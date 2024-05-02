@@ -54,6 +54,9 @@ const FosLogin: React.FC<IProps> = () => {
         <span className="light">FOS</span>&nbsp; Face In the Wild.
       </div>
       <div>
+      <div className='text-sub center'>
+        Welcome to the user study page of the FOS Face.
+      </div>
       <div className='center'>
           <Search
             className="pad-sub"
@@ -70,18 +73,15 @@ const FosLogin: React.FC<IProps> = () => {
             }}
           />
         </div>
-        <div className="text-sub pad">
-          <div className='center pad-sub'>
-            Welcome to the user study page of the FOS Face!
-          </div>
-          <div className='center'>
+        <div className="text-sub">
+          <div className='center pad-sub pad-top'>
           FOS face is a benchmark test dataset with faces in the wild for blind face restoration.
           </div>
           {/* <div className='center'>
           The volunteers are invited to ranking performace of the baselines as user studies in our
           BFR benchmark.
           </div> */}
-          <div className='pad center c-active c-r' >
+          <div className='pad-sub center c-active c-r' >
             <img className="center" src={Teaser} alt="FOS-V samples" style={{width: '90%'}} />
           </div>
         </div>
