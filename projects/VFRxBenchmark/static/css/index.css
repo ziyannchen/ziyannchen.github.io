@@ -67,6 +67,12 @@ body {
     font-weight: bolder;
 }
 
+.bg-title {
+  color: rgba(128, 128, 128, 0.5);
+  font-weight: 1100;
+  font-size: 35px;
+}
+
 .publication-authors {
 }
 
