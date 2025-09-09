@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+CONFIG_FILE=_config.yml
 
 echo "Entry point script running"
 
