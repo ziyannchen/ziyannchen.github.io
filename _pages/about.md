@@ -41,5 +41,5 @@ I am currently a third-year (2023-2026) master student in University of Chinese 
 <hr style="border: 0.7px solid #ddd; margin: 0.7rem 0;">
 
 
-I am activaly looking for a PhD position (ideally in Fall'26 admission), please reach me out if you are intersted!
+Actively seeking a Ph.D. position for Fall 2026 admission. I am eager to connect with potential advisors and research groups. Please feel free to reach out.
 </div>
