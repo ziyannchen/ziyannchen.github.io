@@ -34,7 +34,7 @@ latest_posts:
 
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder. -->
-I am currently a third-year (2023-2026) master student in University of Chinese Academy of Sciences (UCAS) and Shenzhen Institue of Advanced Technology (SIAT), under the supervision of [Prof. Chao Dong](https://scholar.google.com/citations?user=OSDCB0UAAAAJ). Before that, I received my bachelor's degree in Shandong University in 2023.
+I am currently a third-year (2023-2026) master student in University of Chinese Academy of Sciences (UCAS) and Shenzhen Institue of Advanced Technology (SIAT), under the supervision of <a href="https://scholar.google.com/citations?user=OSDCB0UAAAAJ">Prof. Chao Dong</a>. Before that, I received my bachelor's degree in Shandong University in 2023.
 </div>
 
 <div style="width: 100%; max-width: 600px;">
