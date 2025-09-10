@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: 陈紫嫣 Celine / <a href='https://drive.google.com/file/d/1eRV4SYCCj_pZnpV3lwvscYJs3KlWMaot/view?usp=sharing'>résumé</a>
+subtitle: 陈紫嫣 Céline / <a href='https://drive.google.com/file/d/1eRV4SYCCj_pZnpV3lwvscYJs3KlWMaot/view?usp=sharing'>résumé</a>
 #  Address. Contacts. Motto. Etc.
 
 profile:
@@ -41,5 +41,5 @@ I am currently a third-year (2023-2026) master student in University of Chinese 
 <hr style="border: 0.7px solid #ddd; margin: 0.7rem 0;">
 
 
-Actively seeking a Ph.D. position for Fall 2026 admission. I am eager to connect with potential advisors and research groups. Please feel free to reach out.
+I am actively seeking a Ph.D. position for Fall 2026 admission, and eager to connect with potential advisors and research groups. Please feel free to reach out!
 </div>
