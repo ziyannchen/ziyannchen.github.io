@@ -270,11 +270,16 @@
         {% assign entry_has_google_scholar_badge = true %}
       {% endif %}
 
+      {% assign entry_has_github_badge = false %}
+      {% if entry.github_repo %}
+        {% assign entry_has_github_badge = true %}
+      {% endif %}
+
       {% assign entry_has_inspirehep_badge = false %}
       {% if entry.inspirehep_id %}
         {% assign entry_has_inspirehep_badge = true %}
       {% endif %}
-      {% if entry_has_altmetric_badge or entry_has_dimensions_badge or entry_has_google_scholar_badge or entry_has_inspirehep_badge %}
+      {% if entry_has_altmetric_badge or entry_has_dimensions_badge or entry_has_google_scholar_badge or entry_has_github_badge or entry_has_inspirehep_badge %}
         <div class="badges">
           {% if site.enable_publication_badges.altmetric and entry_has_altmetric_badge %}
             <span
@@ -320,6 +325,18 @@
               <img
                 src="https://img.shields.io/badge/scholar-{% google_scholar_citations site.data.socials.scholar_userid entry.google_scholar_id %}-4285F4?logo=googlescholar&labelColor=beige"
                 alt="{% google_scholar_citations site.data.socials.scholar_userid entry.google_scholar_id %} Google Scholar citations"
+              >
+            </a>
+          {% endif %}
+          {% if site.enable_publication_badges.github and entry_has_github_badge %}
+            <a
+              href="https://github.com/{% if entry.github_repo contains 'github.com' %}{{ entry.github_repo | split: 'github.com/' | last }}{% else %}{{ entry.github_repo }}{% endif %}"
+              aria-label="GitHub link"
+              role="button"
+            >
+              <img
+                src="https://img.shields.io/badge/github-{% github_stars entry.github_repo %}-181717?logo=github&logoColor=black&labelColor=beige"
+                alt="{% github_stars entry.github_repo %} GitHub stars"
               >
             </a>
           {% endif %}
