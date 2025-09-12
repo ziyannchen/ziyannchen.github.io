@@ -1,0 +1,21 @@
+metadata:
+  last_updated: '2025-09-12 12:16:49'
+  scholar_userid: zjrMFIIAAAAJ
+papers:
+  zjrMFIIAAAAJ:UeHWp8X0CEIC:
+    title: 'Diffbir: Toward blind image restoration with generative diffusion prior'
+    year: '2024'
+    citations: 358
+  zjrMFIIAAAAJ:qjMakFHDy7sC:
+    title: 'T-sea: Transfer-based self-ensemble attack on object detection'
+    year: '2023'
+    citations: 103
+  zjrMFIIAAAAJ:eQOLeE2rZwMC:
+    title: 'Diffvsr: Enhancing real-world video super-resolution with diffusion models
+      for advanced visual quality and temporal consistency'
+    year: '2025'
+    citations: 12
+  zjrMFIIAAAAJ:YsMSGLbcyi4C:
+    title: 'Towards real-world video face restoration: A new benchmark'
+    year: '2024'
+    citations: 7

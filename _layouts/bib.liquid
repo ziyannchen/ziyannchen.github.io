@@ -322,9 +322,47 @@
               aria-label="Google Scholar link"
               role="button"
             >
+              {% assign citation_count = 0 %}
+              {% assign citation_source = "fallback" %}
+              
+              <!-- Try to get citations from local cache first -->
+              {% if site.data.citations and site.data.citations.papers %}
+                {% assign found_in_cache = false %}
+                
+                <!-- Try direct match with google_scholar_id -->
+                {% if site.data.citations.papers[entry.google_scholar_id] %}
+                  {% assign citation_count = site.data.citations.papers[entry.google_scholar_id].citations %}
+                  {% assign citation_source = "cached" %}
+                  {% assign found_in_cache = true %}
+                {% else %}
+                  <!-- Try with full scholar key format -->
+                  {% assign full_key = site.data.socials.scholar_userid | append: ':' | append: entry.google_scholar_id %}
+                  {% if site.data.citations.papers[full_key] %}
+                    {% assign citation_count = site.data.citations.papers[full_key].citations %}
+                    {% assign citation_source = "cached" %}
+                    {% assign found_in_cache = true %}
+                  {% endif %}
+                {% endif %}
+                
+                <!-- If not found in cache, fallback to live fetch -->
+                {% unless found_in_cache %}
+                  {% assign citation_count = 0 %}{% google_scholar_citations site.data.socials.scholar_userid entry.google_scholar_id %}
+                  {% assign citation_source = "live" %}
+                {% endunless %}
+              {% else %}
+                <!-- No cache available, use live fetch -->
+                {% assign citation_count = 0 %}{% google_scholar_citations site.data.socials.scholar_userid entry.google_scholar_id %}
+                {% assign citation_source = "live" %}
+              {% endif %}
+              
               <img
-                src="https://img.shields.io/badge/scholar-{% google_scholar_citations site.data.socials.scholar_userid entry.google_scholar_id %}-4285F4?logo=googlescholar&labelColor=beige"
-                alt="{% google_scholar_citations site.data.socials.scholar_userid entry.google_scholar_id %} Google Scholar citations"
+                src="https://img.shields.io/badge/scholar-{{ citation_count }}-4285F4?logo=googlescholar&labelColor=beige"
+                alt="{{ citation_count }} Google Scholar citations"
+                {% if citation_source == "cached" and site.data.citations.metadata.last_updated %}
+                  title="Citations: {{ citation_count }} (cached, last updated: {{ site.data.citations.metadata.last_updated }})"
+                {% else %}
+                  title="Citations: {{ citation_count }}"
+                {% endif %}
               >
             </a>
           {% endif %}
