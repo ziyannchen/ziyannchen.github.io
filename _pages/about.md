@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: 陈紫嫣 Céline / <a href='https://drive.google.com/file/d/1eRV4SYCCj_pZnpV3lwvscYJs3KlWMaot/view?usp=sharing'>résumé</a>
+subtitle: 陈紫嫣 Céline / <a href='https://drive.google.com/file/d/1eRV4SYCCj_pZnpV3lwvscYJs3KlWMaot/view?usp=sharing'>Résumé</a> / <a href='https://drive.google.com/file/d/1h0Uq0D6p7FG7oTRf65S4wU2KF-ogDfvO/view?usp=sharing'>Transcript</a>
 #  Address. Contacts. Motto. Etc.
 
 profile:
