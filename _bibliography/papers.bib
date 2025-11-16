@@ -2,16 +2,18 @@
 ---
 
 @article{RestoreAnyone,
-  title={RestoreAnyone: Identity-consistent Face Video Restoration with Reference Guidance},
+  title={RestoreAnyone: Zero-Shot Identity-Consistent Face Video Restoration},
   author={Chen, Ziyan
   and Xie, Liangbin
   and Liu, Yihao
   and Li, Zheyuan
   and Yu, Fanghua
+  and Zhou, Shihao
   and Dong, Chao
   },
-  journal={Under Review of AAAI 2026},
+  journal={Submitted to CVPR 2026},
   year={2025},
+  abstract={In recent years, Face Image Restoration (FIR) has achieved remarkable progress by leveraging generative models to reconstruct high-quality and identity consistent facial images from degraded inputs. However, when extended to Face Video Restoration (FVR), these methods often struggle to maintain distinctive facial characteristics, leading to noticeable identity drift across frames. To address this limitation, concurrent studies have introduced few-shot personalized LoRA finetuning. Yet, this approach requires substantial re-optimization when applied to new identities, and existing reference-guided mechanisms remain insensitive to fine-grained identity cues. To overcome these challenges, we present RestoreAnyone, a zero-shot identity-consistent FVR framework that enforces fine-grained identity preservation throughout the generative process. We systematically explore a broad spectrum of integration strategies and identify an optimal design that maintains identity consistency across both structural and fine-detail levels. Furthermore, to address the scarcity of large-scale video data, we construct MovieID, a comprehensive movie-level reference-based FVR benchmark comprising 32k high-quality video clips of 2.9k distinct identities captured across diverse scenes. Extensive experiments on this benchmark demonstrate that our framework achieves state-of-the-art performance, improving video identity consistency by 36% and delivering substantially higher visual fidelity in restored face videos.},
   pdf={https://drive.google.com/file/d/1qZtbZGg0gmyEk9mSrCai0PxyjgtTxrtO/view?usp=drive_link},
   preview={RestoreAnyone.gif},
   selected={true},
