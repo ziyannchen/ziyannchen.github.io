@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: 陈紫嫣 Céline / <a href='https://drive.google.com/file/d/1eRV4SYCCj_pZnpV3lwvscYJs3KlWMaot/view?usp=sharing'>Résumé</a> / <a href='https://drive.google.com/file/d/1h0Uq0D6p7FG7oTRf65S4wU2KF-ogDfvO/view?usp=sharing'>Transcript</a>
+subtitle: <a href='https://drive.google.com/file/d/1eRV4SYCCj_pZnpV3lwvscYJs3KlWMaot/view?usp=sharing'>Résumé</a> / <a href='https://drive.google.com/file/d/1h0Uq0D6p7FG7oTRf65S4wU2KF-ogDfvO/view?usp=sharing'>Transcript</a>
 #  Address. Contacts. Motto. Etc.
 
 profile:
@@ -35,6 +35,10 @@ latest_posts:
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder. -->
 I am currently a third-year (2023-2026) master student in University of Chinese Academy of Sciences (UCAS) and Shenzhen Institue of Advanced Technology (SIAT), under the supervision of <a href="https://scholar.google.com/citations?user=OSDCB0UAAAAJ">Prof. Chao Dong</a>. Before that, I received my bachelor's degree in Shandong University in 2023.
+</div>
+
+<div>
+My Chinese name is 陈紫嫣 /dzuh/ /yen/。
 </div>
 
 <div style="width: 100%; max-width: 600px;">
