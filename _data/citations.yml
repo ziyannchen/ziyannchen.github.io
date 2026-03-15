@@ -1,15 +1,15 @@
 metadata:
-  last_updated: '2026-02-08 02:26:29'
+  last_updated: '2026-03-15 02:11:17'
   scholar_userid: zjrMFIIAAAAJ
 papers:
   zjrMFIIAAAAJ:UeHWp8X0CEIC:
     title: 'Diffbir: Toward blind image restoration with generative diffusion prior'
     year: '2024'
-    citations: 508
+    citations: 575
   zjrMFIIAAAAJ:qjMakFHDy7sC:
     title: 'T-sea: Transfer-based self-ensemble attack on object detection'
     year: '2023'
-    citations: 121
+    citations: 132
   zjrMFIIAAAAJ:eQOLeE2rZwMC:
     title: 'Diffvsr: Enhancing real-world video super-resolution with diffusion models
       for advanced visual quality and temporal consistency'
@@ -20,15 +20,15 @@ papers:
     year: '2024'
     citations: 10
   zjrMFIIAAAAJ:LkGwnXOMwfcC:
-    title: 'DiffVSR: Revealing an Effective Recipe for Taming Robust Video Super-Resolution
-      Against Complex Degradations'
+    title: 'Diffvsr: Revealing an effective recipe for taming robust video super-resolution
+      against complex degradations'
     year: '2025'
-    citations: 20
+    citations: 21
   zjrMFIIAAAAJ:Se3iqnhoufwC:
-    title: 'TurboFill: Adapting Few-step Text-to-image Model for Fast Image Inpainting'
+    title: 'Turbofill: adapting few-step text-to-image model for fast image inpainting'
     year: '2025'
     citations: 5
   zjrMFIIAAAAJ:roLk4NBRz8UC:
-    title: 'SimpleGVR: A Simple Baseline for Latent-Cascaded Video Super-Resolution'
+    title: 'Simplegvr: A simple baseline for latent-cascaded video super-resolution'
     year: '2025'
-    citations: 1
+    citations: 2
