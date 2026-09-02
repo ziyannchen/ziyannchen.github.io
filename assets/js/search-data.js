@@ -49,6 +49,13 @@ ninja.data = [{
           window.open("https://scholar.google.com/citations?user=zjrMFIIAAAAJ", "_blank");
         },
       },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/ziyan-chen-13a6983a1", "_blank");
+        },
+      },{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
