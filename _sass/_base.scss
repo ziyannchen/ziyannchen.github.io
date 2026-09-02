@@ -451,9 +451,25 @@ ul.task-list input[type="checkbox"] {
     cursor: pointer;
     color: var(--global-text-color);
 
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::before {
+      content: "▸";
+      display: inline-block;
+      margin-right: 0.25rem;
+      font-size: 0.75em;
+      vertical-align: 0.08em;
+    }
+
     &:hover {
       color: var(--global-theme-color);
     }
+  }
+
+  &[open] summary::before {
+    content: "▾";
   }
 
   .pronunciation-dropdown-content {
