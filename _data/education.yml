@@ -1,0 +1,22 @@
+- university: The University of Texas at Austin
+  period: 2026 - 2031
+  degree: Ph.D. Student
+  major: Computer Science
+  url: https://www.cs.utexas.edu/
+  logo: /assets/img/education/ut-austin.png
+
+- university: University of Chinese Academy of Sciences
+  period: 2023 - 2026
+  degree: Master's Degree
+  major: Electronic Engineering
+  url: https://www.ucas.ac.cn/
+  logo: /assets/img/education/cas.webp
+  logo_shape: circle
+
+- university: Shandong University
+  period: 2019 - 2023
+  degree: Bachelor's Degree
+  major: Computer Science and Technology
+  url: https://www.en.sdu.edu.cn/
+  logo: /assets/img/education/shandong-university.png
+  logo_shape: circle

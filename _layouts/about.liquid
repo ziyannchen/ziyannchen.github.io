@@ -43,9 +43,10 @@ layout: default
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
       <div class="mt-5">
-        <h2 class="about-section-title">
-          <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
-        </h2>
+        <h2 class="about-section-title">Latest News</h2>
+        <div class="about-full-publication">
+          <a href="{{ '/news/' | relative_url }}">Full News →</a>
+        </div>
         <div class="about-news">
           {% include news.liquid limit=true %}
         </div>
@@ -65,9 +66,7 @@ layout: default
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <div class="mt-5">
-        <h2>
-          <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
-        </h2>
+        <h2>Selected Publications</h2>
         <div class="about-full-publication">
           <a href="{{ '/publications/' | relative_url }}">Full publications →</a>
         </div>
@@ -80,7 +79,12 @@ layout: default
       </div>
     {% endif %}
 
-    <div class="mt-5">
+    <div class="mt-5 education-section">
+      <h2 class="about-section-title">Education</h2>
+      {% include education.liquid %}
+    </div>
+
+    <div class="mt-5 miscellaneous-section">
       <h2 class="about-section-title">Miscellaneous</h2>
       {% capture miscellaneous_content %}{% include_relative miscellaneous.md %}{% endcapture %}
       {{ miscellaneous_content | markdownify }}

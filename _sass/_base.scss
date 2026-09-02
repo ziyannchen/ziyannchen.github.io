@@ -483,7 +483,7 @@ ul.task-list input[type="checkbox"] {
     th {
       padding-top: 0.35rem;
       padding-bottom: 0.35rem;
-      font-size: 0.85rem;
+      font-size: calc(1rem - 1px);
       line-height: 1.25;
     }
   }
@@ -491,6 +491,86 @@ ul.task-list input[type="checkbox"] {
 
 .about-section-title {
   font-size: 1.5rem;
+}
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: fit-content;
+  max-width: 100%;
+  margin-right: 0;
+  margin-left: 50px;
+}
+
+.education-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.education-logo {
+  display: flex;
+  flex: 0 0 3.25rem;
+  align-items: center;
+  justify-content: center;
+  width: 3.25rem;
+  height: 3.25rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.education-logo--circle img {
+  border-radius: 50%;
+}
+
+.education-details {
+  min-width: 0;
+}
+
+.education-university {
+  margin: 0;
+  font-size: calc(1.1rem - 1px);
+  font-weight: 600;
+  line-height: 1.25;
+
+  a,
+  a:hover {
+    color: #000;
+  }
+}
+
+.education-period {
+  margin-top: 0.15rem;
+  color: var(--global-text-color-light);
+  font-size: calc(0.95rem - 1px);
+}
+
+.education-degree,
+.education-major {
+  font-size: calc(1rem - 1px);
+  line-height: 1.35;
+}
+
+.education-major {
+  font-style: italic;
+}
+
+.education-section .about-section-title {
+  margin-bottom: calc(0.5rem + 15px);
+}
+
+.miscellaneous-section .about-section-title {
+  margin-bottom: calc(0.5rem + 10px);
+}
+
+.education-section,
+.miscellaneous-section {
+  margin-top: calc(3rem + 15px) !important;
 }
 
 .about-selected-papers {

@@ -1,0 +1,17 @@
+<div class="education-list">
+  {% for education in site.data.education %}
+    <div class="education-item">
+      <a class="education-logo{% if education.logo_shape %} education-logo--{{ education.logo_shape }}{% endif %}" href="{{ education.url }}" aria-label="{{ education.university }}">
+        <img src="{{ education.logo | relative_url }}" alt="{{ education.university }} logo" loading="lazy">
+      </a>
+      <div class="education-details">
+        <h3 class="education-university">
+          <a href="{{ education.url }}">{{ education.university }}</a>
+        </h3>
+        <div class="education-period">{{ education.period }}</div>
+        <div class="education-degree">{{ education.degree }}</div>
+        <div class="education-major">{{ education.major }}</div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
