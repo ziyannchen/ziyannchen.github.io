@@ -1,3 +1,5 @@
 nbconvert
 scholarly
 pyyaml
+google-analytics-data
+geonamescache
