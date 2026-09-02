@@ -29,7 +29,6 @@ latest_posts:
 
 
 <div style="width: 100%; max-width: 600px;">
-<hr style="border: 0.7px solid #ddd; margin: 0.7rem 0;">
 
 <div style="margin-bottom: 10px;">
 <details class="pronunciation-dropdown"><summary>How to pronounce my name?</summary><span class="pronunciation-dropdown-content">chen → /chuhn/;<br>ziyan → /dz-yen/.</span></details>

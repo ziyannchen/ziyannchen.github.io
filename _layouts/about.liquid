@@ -86,8 +86,10 @@ layout: default
 
     <div class="mt-5 miscellaneous-section">
       <h2 class="about-section-title">Miscellaneous</h2>
-      {% capture miscellaneous_content %}{% include_relative miscellaneous.md %}{% endcapture %}
-      {{ miscellaneous_content | markdownify }}
+      <div class="miscellaneous-content">
+        {% capture miscellaneous_content %}{% include_relative miscellaneous.md %}{% endcapture %}
+        {{ miscellaneous_content | markdownify }}
+      </div>
     </div>
 
     <div class="mt-5">

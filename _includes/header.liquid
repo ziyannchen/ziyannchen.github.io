@@ -2,11 +2,6 @@
   <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
-      {% unless page.permalink == '/' %}
-        <!-- Social Icons -->
-        <div class="navbar-brand social">{% include social.liquid %}</div>
-      {% endunless %}
-      
       <!-- Google Scholar and GitHub icons in navbar -->
       {% comment %} <div class="navbar-brand social d-flex" style="gap: 0.5rem;">
         {% if site.data.socials.email %}
@@ -42,13 +37,13 @@
       </button>
 
       <div class="collapse navbar-collapse text-right" id="navbarNav">
-        <ul class="navbar-nav ml-auto flex-nowrap">
+        <ul class="navbar-nav navbar-nav-main flex-nowrap">
           {% for page in site.pages %}
             {% if page.permalink == '/' %} {% assign about_title = page.title %} {% endif %}
           {% endfor %}
 
           <!-- Home -->
-          <li class="nav-item {% if page.permalink == '/' %}active{% endif %}">
+          <li class="nav-item nav-left-item {% if page.permalink == '/' %}active{% endif %}">
             <a class="nav-link" href="{{ '/' | relative_url }}">
               {{- about_title }}
               {% if page.permalink == '/' %}
@@ -59,8 +54,26 @@
 
           <!-- Other pages -->
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
+          {% assign right_nav_started = false %}
+          {% unless page.permalink == '/' %}
+            <!-- Social Icons -->
+            <li class="navbar-nav-social nav-right-start">
+              <div class="navbar-brand social">{% include social.liquid %}</div>
+            </li>
+            {% assign right_nav_started = true %}
+          {% endunless %}
           {% for p in sorted_pages %}
             {% if p.nav and p.autogen == null %}
+              {% if p.permalink == '/publications/' %}
+                {% assign nav_position_class = 'nav-left-item' %}
+              {% elsif right_nav_started == false %}
+                {% assign nav_position_class = 'nav-right-start' %}
+              {% else %}
+                {% assign nav_position_class = '' %}
+              {% endif %}
+              {% unless p.permalink == '/publications/' %}
+                {% assign right_nav_started = true %}
+              {% endunless %}
               {% if p.dropdown %}
                 {% assign has_active_child = false %}
                 {% for child in p.children %}
@@ -68,7 +81,7 @@
                     {% assign has_active_child = true %}
                   {% endif %}
                 {% endfor %}
-                <li class="nav-item dropdown {% if page.title == p.title or has_active_child %}active{% endif %}">
+                <li class="nav-item dropdown {{ nav_position_class }} {% if page.title == p.title or has_active_child %}active{% endif %}">
                   <a
                     class="nav-link dropdown-toggle"
                     href="#"
@@ -100,7 +113,7 @@
                 </li>
               {% else %}
                 {% assign parent_link = p.permalink | remove: 'index.html' %}
-                <li class="nav-item {% if page.url contains parent_link %}active{% endif %}">
+                <li class="nav-item {{ nav_position_class }} {% if page.url contains parent_link %}active{% endif %}">
                   {%- if p.permalink contains '://' -%}
                     {%- assign url = p.permalink -%}
                   {%- elsif p.permalink contains '/blog/' -%}
@@ -120,15 +133,16 @@
           {% endfor %}
           {% if site.search_enabled %}
             <!-- Search -->
-            <li class="nav-item">
+            <li class="nav-item {% if right_nav_started == false %}nav-right-start{% endif %}">
               <button id="search-toggle" title="Search" onclick="openSearchModal()">
                 <span class="nav-link">ctrl k <i class="ti ti-search"></i></span>
               </button>
             </li>
+            {% assign right_nav_started = true %}
           {% endif %}
           {% if site.enable_darkmode %}
             <!-- Toogle theme mode -->
-            <li class="toggle-container">
+            <li class="toggle-container {% if right_nav_started == false %}nav-right-start{% endif %}">
               <button id="light-toggle" title="Change theme">
                 <i class="ti ti-sun-moon" id="light-toggle-system"></i>
                 <i class="ti ti-moon-filled" id="light-toggle-dark"></i>
