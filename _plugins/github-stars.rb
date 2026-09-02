@@ -11,6 +11,20 @@ module Jekyll
   class GitHubStarsTag < Liquid::Tag
     Stars = { }
 
+    def cached_star_count(context, repo_path)
+      site = context.registers[:site]
+      cached = site.data['github_stars'] if site && site.data
+      value = cached[repo_path] if cached.is_a?(Hash)
+      return nil if value.nil?
+
+      Helpers.number_to_human(
+        value.to_i,
+        format: '%n%u',
+        precision: 2,
+        units: { thousand: 'K', million: 'M', billion: 'B' }
+      )
+    end
+
     def initialize(tag_name, params, tokens)
       super
       @github_repo = params.strip
@@ -62,11 +76,11 @@ module Jekyll
         star_count = Helpers.number_to_human(star_count, format: '%n%u', precision: 2, units: { thousand: 'K', million: 'M', billion: 'B' })
 
       rescue Exception => e
-        # Handle any errors that may occur during fetching
-        star_count = "N/A"
+        # Keep the last known value if the API is temporarily unavailable.
+        star_count = cached_star_count(context, repo_path) || "N/A"
 
         # Print the error message including the exception class and message
-        puts "Error fetching star count for #{repo_path}: #{e.class} - #{e.message}"
+        puts "Error fetching star count for #{repo_path}: #{e.class} - #{e.message}; using cached value: #{star_count}"
       end
 
       GitHubStarsTag::Stars[repo_path] = star_count

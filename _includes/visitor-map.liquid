@@ -1,0 +1,135 @@
+<div id="visitor-map" class="visitor-map" aria-label="Map showing aggregated visitor locations"></div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const mapElement = document.getElementById("visitor-map");
+
+    if (!mapElement) {
+      return;
+    }
+
+    const escapeHtml = function (value) {
+      return String(value).replace(/[&<>"']/g, function (character) {
+        return {
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&#039;"
+        }[character];
+      });
+    };
+
+    const loadLeaflet = function () {
+      if (window.L) {
+        return Promise.resolve();
+      }
+
+      if (window.visitorMapLeafletPromise) {
+        return window.visitorMapLeafletPromise;
+      }
+
+      const stylesheet = document.createElement("link");
+      stylesheet.rel = "stylesheet";
+      stylesheet.href = "{{ site.third_party_libraries.leaflet.url.css }}";
+      stylesheet.integrity = "{{ site.third_party_libraries.leaflet.integrity.css }}";
+      stylesheet.crossOrigin = "anonymous";
+
+      window.visitorMapLeafletPromise = new Promise(function (resolve) {
+        stylesheet.onload = resolve;
+        stylesheet.onerror = resolve;
+        document.head.appendChild(stylesheet);
+      }).then(function () {
+        return new Promise(function (resolve, reject) {
+          const script = document.createElement("script");
+          script.src = "{{ site.third_party_libraries.leaflet.url.js }}";
+          script.integrity = "{{ site.third_party_libraries.leaflet.integrity.js }}";
+          script.crossOrigin = "anonymous";
+          script.onload = resolve;
+          script.onerror = reject;
+          document.head.appendChild(script);
+        });
+      });
+
+      return window.visitorMapLeafletPromise;
+    };
+
+    const renderMap = function () {
+      return loadLeaflet().then(function () {
+        return fetch("{{ '/assets/data/visitor-map.json' | relative_url }}", { cache: "no-store" });
+      })
+      .then(function (response) {
+        if (!response.ok) {
+          throw new Error("Visitor map data could not be loaded.");
+        }
+        return response.json();
+      })
+      .then(function (data) {
+        const visitors = Array.isArray(data.visitors) ? data.visitors : [];
+
+        if (!visitors.length) {
+          return;
+        }
+
+        const totalVisitors = visitors.reduce(function (total, visitor) {
+          return total + (Number(visitor.visitors) || 0);
+        }, 0);
+
+        const map = L.map(mapElement, {
+          minZoom: 1,
+          maxZoom: 6,
+          scrollWheelZoom: false,
+          worldCopyJump: true
+        }).setView([20, 0], 1);
+
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        const visitorCount = L.control({ position: "topright" });
+        visitorCount.onAdd = function () {
+          const element = L.DomUtil.create("div", "visitor-map-count");
+          element.textContent = totalVisitors.toLocaleString() + " visitors";
+          return element;
+        };
+        visitorCount.addTo(map);
+
+        const maxVisitors = Math.max.apply(null, visitors.map(function (visitor) {
+          return Number(visitor.visitors) || 0;
+        }));
+
+        visitors.forEach(function (visitor) {
+          const count = Number(visitor.visitors) || 0;
+          const radius = 4 + (maxVisitors ? 8 * Math.sqrt(count / maxVisitors) : 0);
+          const location = [Number(visitor.lat), Number(visitor.lon)];
+          const label = visitor.precision === "country"
+            ? escapeHtml(visitor.country) + " (city unavailable)"
+            : escapeHtml(visitor.city) + ", " + escapeHtml(visitor.country);
+
+          L.circleMarker(location, {
+            radius: radius,
+            color: "#b42318",
+            weight: 1,
+            fillColor: "#dc3545",
+            fillOpacity: 0.7
+          }).bindPopup("<strong>" + label + "</strong><br>" + count + " active visitors")
+            .addTo(map);
+        });
+
+      })
+      .catch(function () {});
+    };
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(function (entries) {
+        if (entries.some(function (entry) { return entry.isIntersecting; })) {
+          observer.disconnect();
+          renderMap();
+        }
+      }, { rootMargin: "300px" });
+      observer.observe(mapElement);
+    } else {
+      renderMap();
+    }
+  });
+</script>

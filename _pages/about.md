@@ -1,8 +1,7 @@
 ---
 layout: about
-title: about
+title: Home
 permalink: /
-subtitle: <a href='https://drive.google.com/file/d/1eRV4SYCCj_pZnpV3lwvscYJs3KlWMaot/view?usp=sharing'>Résumé</a> / <a href='https://drive.google.com/file/d/1h0Uq0D6p7FG7oTRf65S4wU2KF-ogDfvO/view?usp=sharing'>Transcript</a>
 #  Address. Contacts. Motto. Etc.
 
 profile:
@@ -32,18 +31,24 @@ latest_posts:
 <div style="width: 100%; max-width: 600px;">
 <hr style="border: 0.7px solid #ddd; margin: 0.7rem 0;">
 
-
+<div style="margin-bottom: 10px;">
+<details class="pronunciation-dropdown"><summary>How to pronounce my name?</summary><span class="pronunciation-dropdown-content">chen → /chuhn/;<br>ziyan → /dz-yen/.</span></details>
+</div>
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder. -->
-I am currently a third-year (2023-2026) master student in University of Chinese Academy of Sciences (UCAS) and Shenzhen Institue of Advanced Technology (SIAT), under the supervision of <a href="https://scholar.google.com/citations?user=OSDCB0UAAAAJ">Prof. Chao Dong</a>. Before that, I received my bachelor's degree in Shandong University in 2023.
+I am currently a first-year CS PhD student in University of Texas at Austin and feel fortunate to have the opportunity to work with Prof. <a href="https://www.philkr.net/">Philipp Krähenbühl</a>.
+</div>
+<div>Before that, I received my master's degree in Chinese Academy of Sciences supervised by Prof. Chao Dong and bachelor's degree in Shandong University.</div>
+
+<div style="margin-top: 15px; margin-bottom: 10px;">
+Email: <code>chenziyan [at] utexas [dot] edu</code> / <code>chen.ziyan [at] outlook [dot] com</code>
 </div>
 
-<div>
-My Chinese name is 陈紫嫣 /dzuh/ /yen/。
+<div class="bio-social-row">
+  <div class="bio-resume-link"><a href="https://drive.google.com/file/d/1IVtrB3Oj4QbvNEeAvTXTOKIrexkFAotf/view?usp=sharing">Résumé</a><span style="margin-left: 5px;">/</span></div>
+  <div class="bio-social-icons">{% include social.liquid %}</div>
+  <div class="bio-contact-note">{{ site.contact_note }}</div>
 </div>
 
 <div style="width: 100%; max-width: 600px;">
 <hr style="border: 0.7px solid #ddd; margin: 0.7rem 0;">
-
-
-I am actively seeking a Ph.D. position for Fall 2026 admission, and eager to connect with potential advisors and research groups. Please feel free to reach out!
 </div>

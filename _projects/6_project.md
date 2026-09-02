@@ -1,5 +1,6 @@
 ---
 layout: page
+search: false
 title: project 6
 description: a project with no image
 img:

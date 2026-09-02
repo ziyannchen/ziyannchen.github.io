@@ -2,12 +2,12 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Ziyan Chen # the website title (if blank, full name will be used instead)
+title: Ziyan Chen 陈紫嫣 # the website title (if blank, full name will be used instead)
 first_name: Ziyan
 middle_name: 
 last_name: Chen
 contact_note: >
-  Feel free to reach out to me via email for any inquiries or collaborations!
+  Feel free to reach out for any questions or collaborations!
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Ziyan Chen's homepage for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: >
@@ -349,21 +349,7 @@ external_links:
 # MAKE SURE imagemagick is installed and on your PATH before enabling imagemagick. In a terminal, run:
 #   convert -version
 imagemagick:
-  enabled: true # enables responsive images for your site (recommended, see https://github.com/alshedivat/al-folio/issues/537)
-  widths:
-    - 480
-    - 800
-    - 1400
-  input_directories:
-    - assets/img/
-  input_formats:
-    - ".jpg"
-    - ".jpeg"
-    - ".png"
-    - ".tiff"
-    - ".gif"
-  output_formats:
-    webp: "-quality 85"
+  enabled: false # load original image files directly
 
 # Lazy loading images
 #   If you enable lazy loading, all images will add the loading="lazy" attribute.
@@ -477,7 +463,7 @@ third_party_libraries:
     version: "3.6.0"
   leaflet:
     integrity:
-      css: "sha256-q9ba7o845pMPFU+zcAll8rv+gC+fSovKsOoNQ6cynuQ="
+      css: "sha256-QZFpF9DkpabUBLoCc7fQJVCmtag/LaVAfAkUJSfuNyY="
       js: "sha256-MgH13bFTTNqsnuEoqNPBLDaqxjGH+lCpqrukmXc8Ppg="
       js_map: "sha256-YAoQ3FzREN4GmVENMir8vgHHypC0xfSK3CAxTHCqx1M="
     local:

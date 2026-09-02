@@ -10,7 +10,6 @@
 # bluesky_url: # your bluesky URL
 # dblp_url: # your DBLP profile url
 # discord_id: # your discord id (18-digit unique numerical identifier)
-email: ziyan.chen@outlook.com # your email address
 # facebook_id: # your facebook id
 # flickr_id: # your flickr id
 github_username: ziyannchen # your GitHub user name
@@ -35,6 +34,7 @@ github_username: ziyannchen # your GitHub user name
 # research_gate_profile: # your profile on ResearchGate
 # rss_icon: true # comment this line to hide the RSS icon
 scholar_userid: zjrMFIIAAAAJ # your Google Scholar ID
+email: chenziyan@utexas.edu # your email address
 # scopus_id: # your profile on Scopus
 # semanticscholar_id: # your Semantic Scholar ID
 # spotify_id: # your spotify id

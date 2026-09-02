@@ -43,17 +43,19 @@ layout: default
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
       <div class="mt-5">
-        <h2>
-          <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+        <h2 class="about-section-title">
+          <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
         </h2>
-        {% include news.liquid limit=true %}
+        <div class="about-news">
+          {% include news.liquid limit=true %}
+        </div>
       </div>
     {% endif %}
 
     <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}
       <div class="mt-5">
-        <h2>
+        <h2 class="about-section-title">
           <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
         </h2>
         {% include latest_posts.liquid %}
@@ -64,15 +66,31 @@ layout: default
     {% if page.selected_papers %}
       <div class="mt-5">
         <h2>
-          <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected papers</a>
+          <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
         </h2>
-        <div class="mt-5">
-          * denotes equal contribution.
+        <div class="about-full-publication">
+          <a href="{{ '/publications/' | relative_url }}">Full publications →</a>
         </div>
-        {% include selected_papers.liquid %}
+        <div class="mt-5 about-selected-note">
+          * equal contribution.
+        </div>
+        <div class="about-selected-papers">
+          {% include selected_papers.liquid %}
+        </div>
       </div>
     {% endif %}
 
+    <div class="mt-5">
+      <h2 class="about-section-title">Miscellaneous</h2>
+      {% capture miscellaneous_content %}{% include_relative miscellaneous.md %}{% endcapture %}
+      {{ miscellaneous_content | markdownify }}
+    </div>
+
+    <div class="mt-5">
+      {% include visitor-map.liquid %}
+    </div>
+
+    {% comment %}
     <!-- Social -->
     {% if page.social %}
       <div class="social mt-5">
@@ -81,6 +99,7 @@ layout: default
         <div class="contact-note">{{ site.contact_note }}</div>
       </div>
     {% endif %}
+    {% endcomment %}
 
     {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
       {% include newsletter.liquid center=true %}

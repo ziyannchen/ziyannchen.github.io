@@ -5,6 +5,8 @@ This script is designed to be run by a GitHub Action.
 """
 
 import os
+import sys
+import tempfile
 import yaml
 import time
 import random
@@ -114,15 +116,16 @@ def get_scholar_citations():
                 print(f"Retrying in {wait_time:.1f} seconds...")
                 time.sleep(wait_time)
             else:
-                print("All retries failed. Using existing data if available.")
-                return citation_data
+                print("All retries failed. Keeping existing data unchanged.")
+                return None
     
     if not author_data:
-        print("Could not fetch author data")
-        return citation_data
+        print("Could not fetch author data. Keeping existing data unchanged.")
+        return None
         
     # Process publications
-    if 'publications' in author_data:
+    processed_publications = 0
+    if 'publications' in author_data and isinstance(author_data['publications'], list):
         for pub in author_data['publications']:
             try:
                 # Get publication ID
@@ -139,7 +142,7 @@ def get_scholar_citations():
                 # Get publication metadata
                 title = "Unknown Title"
                 year = "Unknown Year"
-                citations = 0
+                citations = None
                 
                 if 'bib' in pub:
                     if 'title' in pub['bib']:
@@ -147,8 +150,10 @@ def get_scholar_citations():
                     if 'pub_year' in pub['bib']:
                         year = pub['bib']['pub_year']
                 
-                if 'num_citations' in pub:
-                    citations = pub['num_citations']
+                if 'num_citations' not in pub or not isinstance(pub['num_citations'], int):
+                    print(f"Warning: No valid citation count for {title}; keeping any existing record")
+                    continue
+                citations = pub['num_citations']
                 
                 print(f"Found: {title} ({year}) - Citations: {citations}")
                 
@@ -158,21 +163,43 @@ def get_scholar_citations():
                     'year': year,
                     'citations': citations
                 }
+                processed_publications += 1
                 
             except Exception as e:
                 print(f"Error processing publication: {str(e)}")
     else:
-        print("No publications found in author data")
+        print("No valid publications found in author data. Keeping existing data unchanged.")
+        return None
+
+    if processed_publications == 0:
+        print("No publications with valid citation counts were fetched. Keeping existing data unchanged.")
+        return None
     
     # Save to YAML file
     try:
-        with open(OUTPUT_FILE, 'w') as f:
-            yaml.dump(citation_data, f, default_flow_style=False, sort_keys=False)
+        output_dir = os.path.dirname(OUTPUT_FILE) or "."
+        temp_fd, temp_path = tempfile.mkstemp(
+            dir=output_dir,
+            prefix=".citations.",
+            suffix=".tmp",
+            text=True,
+        )
+        try:
+            with os.fdopen(temp_fd, 'w', encoding='utf-8') as f:
+                yaml.safe_dump(citation_data, f, default_flow_style=False, sort_keys=False)
+            os.replace(temp_path, OUTPUT_FILE)
+        except Exception:
+            try:
+                os.unlink(temp_path)
+            except OSError:
+                pass
+            raise
         print(f"Citation data saved to {OUTPUT_FILE}")
     except Exception as e:
-        print(f"Error saving citation data: {str(e)}")
+        print(f"Error saving citation data: {str(e)}. Existing data was not replaced.")
+        return None
     
     return citation_data
 
 if __name__ == "__main__":
-    get_scholar_citations()
+    sys.exit(0 if get_scholar_citations() is not None else 1)
