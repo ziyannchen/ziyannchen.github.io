@@ -500,7 +500,7 @@ ul.task-list input[type="checkbox"] {
 
 .visitor-map {
   display: block;
-  width: 52%;
+  width: 41.6%;
   height: 196px;
   aspect-ratio: 2 / 1;
   margin-left: auto;
@@ -520,6 +520,14 @@ ul.task-list input[type="checkbox"] {
   font-size: 0.75rem;
   line-height: 1.2;
   box-shadow: 0 1px 4px rgb(0 0 0 / 15%);
+}
+
+.visitor-map .leaflet-control-zoom a,
+.visitor-map .leaflet-control-zoom a:hover {
+  width: 17px !important;
+  height: 17px !important;
+  line-height: 17px !important;
+  font-size: 14px !important;
 }
 
 @media (max-width: 575.98px) {
