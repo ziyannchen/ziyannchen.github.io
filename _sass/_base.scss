@@ -449,7 +449,11 @@ ul.task-list input[type="checkbox"] {
   summary {
     display: inline;
     cursor: pointer;
-    color: var(--global-theme-color);
+    color: var(--global-text-color);
+
+    &:hover {
+      color: var(--global-theme-color);
+    }
   }
 
   .pronunciation-dropdown-content {
@@ -496,15 +500,15 @@ ul.task-list input[type="checkbox"] {
 
 .visitor-map {
   display: block;
-  width: 40%;
-  height: auto;
+  width: 52%;
+  height: 196px;
   aspect-ratio: 2 / 1;
   margin-left: auto;
   margin-right: auto;
   border: 1px solid var(--global-divider-color);
   border-radius: 0.25rem;
   overflow: hidden;
-  background: #f4f5f6;
+  background: var(--global-card-bg-color);
 }
 
 .visitor-map-count {
@@ -541,26 +545,26 @@ ul.task-list input[type="checkbox"] {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  height: 1.275rem;
-  font-size: 1.275rem;
+  height: 1.5rem;
+  font-size: 1.5rem;
   line-height: 1;
-  color: #000;
+  color: var(--global-text-color);
 
   a {
-    color: #000;
+    color: var(--global-text-color);
 
     img {
-      width: 1.275rem;
-      height: 1.275rem;
+      width: 1.5rem;
+      height: 1.5rem;
     }
 
     svg {
-      width: 1.275rem;
-      height: 1.275rem;
+      width: 1.5rem;
+      height: 1.5rem;
     }
 
     i::before {
-      color: #000;
+      color: var(--global-text-color);
     }
   }
 }
@@ -568,9 +572,9 @@ ul.task-list input[type="checkbox"] {
 .bio-contact-note {
   display: flex;
   align-items: center;
-  height: 1.275rem;
+  height: 1.5rem;
   font-size: 0.8rem;
-  color: #555;
+  color: var(--global-text-color-light);
 }
 
 .wechat-modal {
@@ -605,18 +609,18 @@ ul.task-list input[type="checkbox"] {
 
 // Footer
 footer.fixed-bottom {
-  background-color: #f3f3f3;
+  background-color: var(--global-footer-bg-color);
   font-size: 0.75rem;
 
   .container {
-    color: #555;
+    color: var(--global-footer-text-color);
     padding-top: 9px;
     padding-bottom: 8px;
     text-align: center;
   }
 
   a {
-    color: #555;
+    color: var(--global-footer-link-color);
 
     &:hover {
       color: var(--global-theme-color);
