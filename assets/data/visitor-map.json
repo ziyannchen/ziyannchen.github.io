@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-01T22:56:16.682299+00:00",
+  "updated_at": "2026-09-06T04:47:36.153879+00:00",
   "date_range": "all available data since 2020-01-01",
   "visitors": [
     {
@@ -11,7 +11,7 @@
       "precision": "city"
     },
     {
-      "visitors": 372,
+      "visitors": 388,
       "city": "Singapore",
       "country": "Singapore",
       "lat": 1.28967,
@@ -59,7 +59,7 @@
       "precision": "city"
     },
     {
-      "visitors": 14,
+      "visitors": 15,
       "city": "San Jose",
       "country": "United States",
       "lat": 37.33939,
@@ -72,6 +72,14 @@
       "country": "United States",
       "lat": 34.05223,
       "lon": -118.24368,
+      "precision": "city"
+    },
+    {
+      "visitors": 11,
+      "city": "Austin",
+      "country": "United States",
+      "lat": 30.26715,
+      "lon": -97.74306,
       "precision": "city"
     },
     {
@@ -96,14 +104,6 @@
       "country": "China",
       "lat": 22.54554,
       "lon": 114.0683,
-      "precision": "city"
-    },
-    {
-      "visitors": 7,
-      "city": "Austin",
-      "country": "United States",
-      "lat": 30.26715,
-      "lon": -97.74306,
       "precision": "city"
     },
     {
@@ -188,10 +188,26 @@
     },
     {
       "visitors": 3,
+      "city": "Dallas",
+      "country": "United States",
+      "lat": 32.78306,
+      "lon": -96.80667,
+      "precision": "city"
+    },
+    {
+      "visitors": 3,
       "city": "Irvine",
       "country": "United States",
       "lat": 33.66946,
       "lon": -117.82311,
+      "precision": "city"
+    },
+    {
+      "visitors": 3,
+      "city": "Santa Clara",
+      "country": "United States",
+      "lat": 37.35411,
+      "lon": -121.95524,
       "precision": "city"
     },
     {
@@ -292,14 +308,6 @@
     },
     {
       "visitors": 2,
-      "city": "Dallas",
-      "country": "United States",
-      "lat": 32.78306,
-      "lon": -96.80667,
-      "precision": "city"
-    },
-    {
-      "visitors": 2,
       "city": "Hialeah Gardens",
       "country": "United States",
       "lat": 25.8651,
@@ -336,14 +344,6 @@
       "country": "United States",
       "lat": 32.71571,
       "lon": -117.16472,
-      "precision": "city"
-    },
-    {
-      "visitors": 2,
-      "city": "Santa Clara",
-      "country": "United States",
-      "lat": 37.35411,
-      "lon": -121.95524,
       "precision": "city"
     },
     {
@@ -496,6 +496,14 @@
       "country": "Germany",
       "lat": 50.11552,
       "lon": 8.68417,
+      "precision": "city"
+    },
+    {
+      "visitors": 1,
+      "city": "Heidelberg",
+      "country": "Germany",
+      "lat": 49.40768,
+      "lon": 8.69079,
       "precision": "city"
     },
     {
