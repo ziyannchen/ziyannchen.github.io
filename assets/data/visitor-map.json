@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-06T04:47:36.153879+00:00",
+  "updated_at": "2026-09-13T04:56:25.702338+00:00",
   "date_range": "all available data since 2020-01-01",
   "visitors": [
     {
@@ -11,7 +11,7 @@
       "precision": "city"
     },
     {
-      "visitors": 388,
+      "visitors": 421,
       "city": "Singapore",
       "country": "Singapore",
       "lat": 1.28967,
@@ -19,7 +19,7 @@
       "precision": "city"
     },
     {
-      "visitors": 66,
+      "visitors": 68,
       "city": "City unavailable",
       "country": "United States",
       "lat": 38.89511,
@@ -35,7 +35,7 @@
       "precision": "country"
     },
     {
-      "visitors": 40,
+      "visitors": 41,
       "city": "City unavailable",
       "country": "China",
       "lat": 39.9075,
@@ -59,7 +59,7 @@
       "precision": "city"
     },
     {
-      "visitors": 15,
+      "visitors": 16,
       "city": "San Jose",
       "country": "United States",
       "lat": 37.33939,
@@ -83,7 +83,15 @@
       "precision": "city"
     },
     {
-      "visitors": 9,
+      "visitors": 10,
+      "city": "Shenzhen",
+      "country": "China",
+      "lat": 22.54554,
+      "lon": 114.0683,
+      "precision": "city"
+    },
+    {
+      "visitors": 10,
       "city": "Ashburn",
       "country": "United States",
       "lat": 39.04372,
@@ -99,15 +107,7 @@
       "precision": "city"
     },
     {
-      "visitors": 8,
-      "city": "Shenzhen",
-      "country": "China",
-      "lat": 22.54554,
-      "lon": 114.0683,
-      "precision": "city"
-    },
-    {
-      "visitors": 6,
+      "visitors": 7,
       "city": "City unavailable",
       "country": "Taiwan",
       "lat": 25.05306,
@@ -171,6 +171,22 @@
       "precision": "city"
     },
     {
+      "visitors": 4,
+      "city": "Seattle",
+      "country": "United States",
+      "lat": 47.60621,
+      "lon": -122.33207,
+      "precision": "city"
+    },
+    {
+      "visitors": 4,
+      "city": "City unavailable",
+      "country": "Germany",
+      "lat": 52.52437,
+      "lon": 13.41053,
+      "precision": "country"
+    },
+    {
       "visitors": 3,
       "city": "Boardman",
       "country": "United States",
@@ -212,27 +228,11 @@
     },
     {
       "visitors": 3,
-      "city": "Seattle",
-      "country": "United States",
-      "lat": 47.60621,
-      "lon": -122.33207,
-      "precision": "city"
-    },
-    {
-      "visitors": 3,
       "city": "The Dalles",
       "country": "United States",
       "lat": 45.59456,
       "lon": -121.17868,
       "precision": "city"
-    },
-    {
-      "visitors": 3,
-      "city": "City unavailable",
-      "country": "Germany",
-      "lat": 52.52437,
-      "lon": 13.41053,
-      "precision": "country"
     },
     {
       "visitors": 2,
@@ -864,6 +864,14 @@
       "country": "United States",
       "lat": 47.75565,
       "lon": -122.34152,
+      "precision": "city"
+    },
+    {
+      "visitors": 1,
+      "city": "University City",
+      "country": "United States",
+      "lat": 38.65588,
+      "lon": -90.30928,
       "precision": "city"
     },
     {
