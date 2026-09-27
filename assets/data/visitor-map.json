@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-20T04:59:54.019590+00:00",
+  "updated_at": "2026-09-27T05:25:26.600156+00:00",
   "date_range": "all available data since 2020-01-01",
   "visitors": [
     {
@@ -11,7 +11,7 @@
       "precision": "city"
     },
     {
-      "visitors": 449,
+      "visitors": 478,
       "city": "Singapore",
       "country": "Singapore",
       "lat": 1.28967,
@@ -43,6 +43,14 @@
       "precision": "country"
     },
     {
+      "visitors": 17,
+      "city": "Austin",
+      "country": "United States",
+      "lat": 30.26715,
+      "lon": -97.74306,
+      "precision": "city"
+    },
+    {
       "visitors": 16,
       "city": "Hong Kong",
       "country": "Hong Kong",
@@ -68,14 +76,6 @@
     },
     {
       "visitors": 13,
-      "city": "Austin",
-      "country": "United States",
-      "lat": 30.26715,
-      "lon": -97.74306,
-      "precision": "city"
-    },
-    {
-      "visitors": 13,
       "city": "Los Angeles",
       "country": "United States",
       "lat": 34.05223,
@@ -83,7 +83,7 @@
       "precision": "city"
     },
     {
-      "visitors": 11,
+      "visitors": 12,
       "city": "Shenzhen",
       "country": "China",
       "lat": 22.54554,
@@ -116,6 +116,22 @@
     },
     {
       "visitors": 5,
+      "city": "Beijing",
+      "country": "China",
+      "lat": 39.9075,
+      "lon": 116.39723,
+      "precision": "city"
+    },
+    {
+      "visitors": 5,
+      "city": "Zürich",
+      "country": "Switzerland",
+      "lat": 47.36667,
+      "lon": 8.55,
+      "precision": "city"
+    },
+    {
+      "visitors": 5,
       "city": "Des Moines",
       "country": "United States",
       "lat": 41.60054,
@@ -140,26 +156,10 @@
     },
     {
       "visitors": 4,
-      "city": "Beijing",
-      "country": "China",
-      "lat": 39.9075,
-      "lon": 116.39723,
-      "precision": "city"
-    },
-    {
-      "visitors": 4,
       "city": "Amsterdam",
       "country": "Netherlands",
       "lat": 52.37403,
       "lon": 4.88969,
-      "precision": "city"
-    },
-    {
-      "visitors": 4,
-      "city": "Zürich",
-      "country": "Switzerland",
-      "lat": 47.36667,
-      "lon": 8.55,
       "precision": "city"
     },
     {
@@ -232,6 +232,14 @@
       "country": "United States",
       "lat": 45.59456,
       "lon": -121.17868,
+      "precision": "city"
+    },
+    {
+      "visitors": 2,
+      "city": "Sydney",
+      "country": "Australia",
+      "lat": -33.86785,
+      "lon": 151.20732,
       "precision": "city"
     },
     {
@@ -376,14 +384,6 @@
       "country": "Australia",
       "lat": -37.814,
       "lon": 144.96332,
-      "precision": "city"
-    },
-    {
-      "visitors": 1,
-      "city": "Sydney",
-      "country": "Australia",
-      "lat": -33.86785,
-      "lon": 151.20732,
       "precision": "city"
     },
     {
