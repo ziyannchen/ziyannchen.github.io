@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-27T05:25:26.600156+00:00",
+  "updated_at": "2026-10-04T06:01:11.084166+00:00",
   "date_range": "all available data since 2020-01-01",
   "visitors": [
     {
@@ -11,7 +11,7 @@
       "precision": "city"
     },
     {
-      "visitors": 478,
+      "visitors": 506,
       "city": "Singapore",
       "country": "Singapore",
       "lat": 1.28967,
@@ -19,7 +19,7 @@
       "precision": "city"
     },
     {
-      "visitors": 69,
+      "visitors": 70,
       "city": "City unavailable",
       "country": "United States",
       "lat": 38.89511,
@@ -51,6 +51,14 @@
       "precision": "city"
     },
     {
+      "visitors": 17,
+      "city": "San Jose",
+      "country": "United States",
+      "lat": 37.33939,
+      "lon": -121.89496,
+      "precision": "city"
+    },
+    {
       "visitors": 16,
       "city": "Hong Kong",
       "country": "Hong Kong",
@@ -64,14 +72,6 @@
       "country": "United States",
       "lat": 41.26194,
       "lon": -95.86083,
-      "precision": "city"
-    },
-    {
-      "visitors": 16,
-      "city": "San Jose",
-      "country": "United States",
-      "lat": 37.33939,
-      "lon": -121.89496,
       "precision": "city"
     },
     {
@@ -564,6 +564,14 @@
     },
     {
       "visitors": 1,
+      "city": "City unavailable",
+      "country": "Pakistan",
+      "lat": 33.72148,
+      "lon": 73.04329,
+      "precision": "country"
+    },
+    {
+      "visitors": 1,
       "city": "Warsaw",
       "country": "Poland",
       "lat": 52.22977,
@@ -732,6 +740,14 @@
     },
     {
       "visitors": 1,
+      "city": "Evanston",
+      "country": "United States",
+      "lat": 42.04114,
+      "lon": -87.69006,
+      "precision": "city"
+    },
+    {
+      "visitors": 1,
       "city": "Flagstaff",
       "country": "United States",
       "lat": 35.19807,
@@ -744,6 +760,14 @@
       "country": "United States",
       "lat": 37.54827,
       "lon": -121.98857,
+      "precision": "city"
+    },
+    {
+      "visitors": 1,
+      "city": "Glenview",
+      "country": "United States",
+      "lat": 42.06975,
+      "lon": -87.78784,
       "precision": "city"
     },
     {
@@ -912,6 +936,14 @@
       "country": "Vietnam",
       "lat": 21.01004,
       "lon": 107.27345,
+      "precision": "city"
+    },
+    {
+      "visitors": 1,
+      "city": "Ho Chi Minh City",
+      "country": "Vietnam",
+      "lat": 10.82302,
+      "lon": 106.62965,
       "precision": "city"
     }
   ]
