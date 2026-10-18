@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-11T05:57:55.483936+00:00",
+  "updated_at": "2026-10-18T04:43:11.204951+00:00",
   "date_range": "all available data since 2020-01-01",
   "visitors": [
     {
@@ -11,7 +11,7 @@
       "precision": "city"
     },
     {
-      "visitors": 535,
+      "visitors": 546,
       "city": "Singapore",
       "country": "Singapore",
       "lat": 1.28967,
@@ -43,7 +43,7 @@
       "precision": "country"
     },
     {
-      "visitors": 17,
+      "visitors": 18,
       "city": "Austin",
       "country": "United States",
       "lat": 30.26715,
@@ -132,6 +132,14 @@
     },
     {
       "visitors": 5,
+      "city": "Dallas",
+      "country": "United States",
+      "lat": 32.78306,
+      "lon": -96.80667,
+      "precision": "city"
+    },
+    {
+      "visitors": 5,
       "city": "Des Moines",
       "country": "United States",
       "lat": 41.60054,
@@ -160,14 +168,6 @@
       "country": "Netherlands",
       "lat": 52.37403,
       "lon": 4.88969,
-      "precision": "city"
-    },
-    {
-      "visitors": 4,
-      "city": "Dallas",
-      "country": "United States",
-      "lat": 32.78306,
-      "lon": -96.80667,
       "precision": "city"
     },
     {
@@ -476,6 +476,14 @@
     },
     {
       "visitors": 1,
+      "city": "Medellín",
+      "country": "Colombia",
+      "lat": 6.245,
+      "lon": -75.57151,
+      "precision": "city"
+    },
+    {
+      "visitors": 1,
       "city": "Guayaquil",
       "country": "Ecuador",
       "lat": -2.19616,
@@ -604,6 +612,22 @@
     },
     {
       "visitors": 1,
+      "city": "Karachi",
+      "country": "Pakistan",
+      "lat": 24.8608,
+      "lon": 67.0104,
+      "precision": "city"
+    },
+    {
+      "visitors": 1,
+      "city": "Mingora",
+      "country": "Pakistan",
+      "lat": 34.7795,
+      "lon": 72.36265,
+      "precision": "city"
+    },
+    {
+      "visitors": 1,
       "city": "Warsaw",
       "country": "Poland",
       "lat": 52.22977,
@@ -720,6 +744,14 @@
       "country": "United States",
       "lat": 39.29038,
       "lon": -76.61219,
+      "precision": "city"
+    },
+    {
+      "visitors": 1,
+      "city": "Bloomington",
+      "country": "United States",
+      "lat": 44.8408,
+      "lon": -93.29828,
       "precision": "city"
     },
     {
