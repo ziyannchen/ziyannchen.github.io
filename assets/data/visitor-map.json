@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T04:53:11.840561+00:00",
+  "updated_at": "2026-11-01T06:20:47.412000+00:00",
   "date_range": "all available data since 2020-01-01",
   "visitors": [
     {
@@ -11,7 +11,7 @@
       "precision": "city"
     },
     {
-      "visitors": 546,
+      "visitors": 547,
       "city": "Singapore",
       "country": "Singapore",
       "lat": 1.28967,
@@ -43,7 +43,7 @@
       "precision": "country"
     },
     {
-      "visitors": 25,
+      "visitors": 27,
       "city": "Austin",
       "country": "United States",
       "lat": 30.26715,
@@ -115,11 +115,35 @@
       "precision": "country"
     },
     {
+      "visitors": 6,
+      "city": "Des Moines",
+      "country": "United States",
+      "lat": 41.60054,
+      "lon": -93.60911,
+      "precision": "city"
+    },
+    {
+      "visitors": 6,
+      "city": "City unavailable",
+      "country": "Japan",
+      "lat": 35.6895,
+      "lon": 139.69171,
+      "precision": "country"
+    },
+    {
       "visitors": 5,
       "city": "Beijing",
       "country": "China",
       "lat": 39.9075,
       "lon": 116.39723,
+      "precision": "city"
+    },
+    {
+      "visitors": 5,
+      "city": "Amsterdam",
+      "country": "Netherlands",
+      "lat": 52.37403,
+      "lon": 4.88969,
       "precision": "city"
     },
     {
@@ -140,10 +164,10 @@
     },
     {
       "visitors": 5,
-      "city": "Des Moines",
+      "city": "Seattle",
       "country": "United States",
-      "lat": 41.60054,
-      "lon": -93.60911,
+      "lat": 47.60621,
+      "lon": -122.33207,
       "precision": "city"
     },
     {
@@ -155,35 +179,11 @@
       "precision": "city"
     },
     {
-      "visitors": 5,
-      "city": "City unavailable",
-      "country": "Japan",
-      "lat": 35.6895,
-      "lon": 139.69171,
-      "precision": "country"
-    },
-    {
-      "visitors": 4,
-      "city": "Amsterdam",
-      "country": "Netherlands",
-      "lat": 52.37403,
-      "lon": 4.88969,
-      "precision": "city"
-    },
-    {
       "visitors": 4,
       "city": "Moses Lake",
       "country": "United States",
       "lat": 47.13014,
       "lon": -119.27808,
-      "precision": "city"
-    },
-    {
-      "visitors": 4,
-      "city": "Seattle",
-      "country": "United States",
-      "lat": 47.60621,
-      "lon": -122.33207,
       "precision": "city"
     },
     {
@@ -200,6 +200,14 @@
       "country": "Australia",
       "lat": -33.86785,
       "lon": 151.20732,
+      "precision": "city"
+    },
+    {
+      "visitors": 3,
+      "city": "Guangzhou",
+      "country": "China",
+      "lat": 23.11667,
+      "lon": 113.25,
       "precision": "city"
     },
     {
@@ -257,14 +265,6 @@
       "lat": 45.41117,
       "lon": -75.69812,
       "precision": "country"
-    },
-    {
-      "visitors": 2,
-      "city": "Guangzhou",
-      "country": "China",
-      "lat": 23.11667,
-      "lon": 113.25,
-      "precision": "city"
     },
     {
       "visitors": 2,
@@ -836,6 +836,14 @@
     },
     {
       "visitors": 1,
+      "city": "Hartford",
+      "country": "United States",
+      "lat": 41.76371,
+      "lon": -72.68509,
+      "precision": "city"
+    },
+    {
+      "visitors": 1,
       "city": "Hoboken",
       "country": "United States",
       "lat": 40.74399,
@@ -880,6 +888,14 @@
       "country": "United States",
       "lat": 41.66199,
       "lon": -86.15862,
+      "precision": "city"
+    },
+    {
+      "visitors": 1,
+      "city": "Orlando",
+      "country": "United States",
+      "lat": 28.53834,
+      "lon": -81.37924,
       "precision": "city"
     },
     {
